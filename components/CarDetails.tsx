@@ -4,6 +4,7 @@ import { CarProps } from '@/types';
 import Image from 'next/image';
 import {Fragment} from 'react'
 import {Dialog,Transition} from '@headlessui/react'
+import { generateCarImageUrl } from '@/utils';
 
 interface CarDetailsProps{
     isOpen:boolean;
@@ -49,17 +50,17 @@ const CarDetails = ({car,closeModal,isOpen}:CarDetailsProps) => {
                   </button>
                   <div className='flex-1 flex flex-col gap-3'>
                     <div className='relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg' >
-                    <Image className='object-contain' src='/hero.png' alt='car'  fill priority /> 
+                    <Image className='object-contain' src={generateCarImageUrl(car)} alt='car'  fill priority /> 
                     </div>
                     <div className='flex gap-3'>
                       <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg '>
-                      <Image className='object-contain' src='/hero.png' alt='car'  fill priority /> 
+                      <Image className='object-contain' src={generateCarImageUrl(car,'29')} alt='car'  fill priority /> 
                       </div>
                       <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg '>
-                      <Image className='object-contain' src='/hero.png' alt='car'  fill priority /> 
+                      <Image className='object-contain' src={generateCarImageUrl(car,'33')} alt='car'  fill priority /> 
                       </div>
                       <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg '>
-                      <Image className='object-contain' src='/hero.png' alt='car'  fill priority /> 
+                      <Image className='object-contain' src={generateCarImageUrl(car,'13')} alt='car'  fill priority /> 
                       </div>
                     </div>
                   </div>
