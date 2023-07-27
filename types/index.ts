@@ -14,6 +14,7 @@ export interface SearchManufacturerProps{
     manufacturer:string,
     setManufacturer:(manufacturer:string)=>void;
 }
+
 export interface CarProps {
     city_mpg:number;
     class:string;
@@ -27,4 +28,11 @@ export interface CarProps {
     model:string;
     transmission:string;
     year:number;
+}
+export interface FilterProps{
+    manufacturer:string;
+    model:string;
+    year:number;
+    limit:number;
+    fuel:string;
 }
